@@ -7,6 +7,7 @@ namespace :webpacker do
       at: fetch(:webpack_dirs),
       skip: %{echo "-----> Skipping webpacker compile"},
       changed: %{echo "-----> Compiling webpack assets"
+      #{echo_cmd "yarn"}
       #{echo_cmd "#{fetch(:rake)} webpacker:compile"}}
     ), quiet: true
   end
