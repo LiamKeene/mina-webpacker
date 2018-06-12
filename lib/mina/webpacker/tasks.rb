@@ -2,7 +2,7 @@ set :webpack_dirs, ['app/javascript/']
 
 namespace :webpacker do
   desc 'Compile webpack assets'
-  task compile: :environment do
+  task :compile do
     command check_for_changes_script(
       at: fetch(:webpack_dirs),
       skip: %{echo "-----> Skipping webpacker compile"},
